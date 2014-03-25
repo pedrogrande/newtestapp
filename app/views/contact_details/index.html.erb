@@ -1,0 +1,44 @@
+<h1>Listing contact_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tagline</th>
+      <th>About</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Facebook</th>
+      <th>Twitter</th>
+      <th>Linkedin</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contact_details.each do |contact_detail| %>
+      <tr>
+        <td><%= contact_detail.name %></td>
+        <td><%= contact_detail.tagline %></td>
+        <td><%= contact_detail.about %></td>
+        <td><%= contact_detail.address %></td>
+        <td><%= contact_detail.phone %></td>
+        <td><%= contact_detail.email %></td>
+        <td><%= contact_detail.facebook %></td>
+        <td><%= contact_detail.twitter %></td>
+        <td><%= contact_detail.linkedin %></td>
+        <td><%= link_to 'Show', contact_detail %></td>
+        <td><%= link_to 'Edit', edit_contact_detail_path(contact_detail) %></td>
+        <td><%= link_to 'Destroy', contact_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contact detail', new_contact_detail_path %>
+

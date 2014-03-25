@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sydney Web Developer - Pete Argent</title>
+  <meta name="description" content="Check out my amazing web development skills - check out my work">
+  
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+	<%= render 'layouts/navigation' %>
+
+	<img src="<%= asset_path '01.jpg' %>">
+		
+
+		<%= yield %>
+	
+
+</body>
+</html>
